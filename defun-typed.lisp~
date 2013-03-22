@@ -1,0 +1,6 @@
+;;;; defun-typed.lisp
+
+(in-package #:defun-typed)
+
+;;; "defun-typed" goes here. Hacks and glory await!
+
