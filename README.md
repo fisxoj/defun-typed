@@ -2,7 +2,7 @@
 
 Defun-typed comes with a single macro whch is only useful for generating functions with type information automatically added.
 
-```common lisp
+```lisp
 
 (defun-typed (fib fixnum t speed (safety 0))
     ((n fixnum))
@@ -13,7 +13,7 @@ Defun-typed comes with a single macro whch is only useful for generating functio
 
 This expands to
 
-```common lisp
+```lisp
 (PROGN
  (DECLAIM (FTYPE (FUNCTION (FIXNUM) FIXNUM) FIB)
           (INLINE FIB))
@@ -28,7 +28,7 @@ This expands to
 
 This is primarily useful for performance-critical code, like numerical simulations, where giving your lisp the greatest possible type information is desirable.  The lambda-list of defun-typed is as follows:
 
-```common lisp
+```lisp
 ((name return-type &optional inline &rest optimization-list) lambda-list &body body)
 ```
 name: function's name
